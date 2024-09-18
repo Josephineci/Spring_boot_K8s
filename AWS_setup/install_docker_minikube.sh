@@ -31,6 +31,9 @@ sudo systemctl start docker
 # Check Docker service status
 sudo systemctl status docker
 
+# Add your user to the docker group
+sudo usermod -aG docker $USER && newgrp docker
+
 # Check Docker version
 docker --version
 
